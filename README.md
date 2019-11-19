@@ -23,3 +23,7 @@ To demonstrate the relativity between patient's TIL Infusion clonality, the clon
 
 Here is an example of the clone tracking plot displaying the TIL Infusion products of all the patients in the research project for the TRA and TRB chains:
 ![image](https://github.com/CameronKerr/CapTCR_TIL_Tracking/blob/master/Images/ClonalAbundanceInfusionComparison.JPG)
+
+### [Sample Diversity Function](https://github.com/CameronKerr/CapTCR_TIL_Tracking/blob/master/Diversity%20Functions/SampleDiv.R) ###
+
+To demonstrate the effect of diversity on patients 
