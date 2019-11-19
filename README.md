@@ -1,10 +1,10 @@
 # CapTCR_TIL_Tracking
 
-CapTCR TIL Tracking is a research project being run in the [Pugh Lab] (http://pughlab.org/) at the Princess Margaret Cancer Research Centre. The project uses the innovative tool that the lab has developed called [CapTCR] (https://www.ncbi.nlm.nih.gov/pubmed/30530777) to longitudinally track adoptive-cell transfer of Tumor-infiltrating lymphocytes (TILs) in sold-tumor cancer patients from peripheral blood samples. 
+CapTCR TIL Tracking is a research project being run in the [Pugh Lab](http://pughlab.org/) at the Princess Margaret Cancer Research Centre. The project uses the innovative tool that the lab has developed called [CapTCR](https://www.ncbi.nlm.nih.gov/pubmed/30530777) to longitudinally track adoptive-cell transfer of Tumor-infiltrating lymphocytes (TILs) in sold-tumor cancer patients from peripheral blood samples. 
 
 ## Materials and Methods
 
-Through this study, patients peripheral blood was taken and genomic DNA (gDNA), RNA or copy DNA (cDNA), and circuilating free DNA (cfDNA) was extracted. The sample cohorts were taken through the single or double-step capture process of CapTCR and then sequenced. Resulting files were then taken through the bioinformatics pipeline. The first step was to align and assemble the clones using [MiXCR 1.3.1] (https://www.nature.com/articles/nmeth.3364) and then run them through quality control downsampling. 
+Through this study, patients peripheral blood was taken and genomic DNA (gDNA), RNA or copy DNA (cDNA), and circuilating free DNA (cfDNA) was extracted. The sample cohorts were taken through the single or double-step capture process of CapTCR and then sequenced. Resulting files were then taken through the bioinformatics pipeline. The first step was to align and assemble the clones using [MiXCR 1.3.1](https://www.nature.com/articles/nmeth.3364) and then run them through quality control downsampling. 
 
 After quality control, the samples were analyzed using a custom Bash/Python/R pipeline. 
 
