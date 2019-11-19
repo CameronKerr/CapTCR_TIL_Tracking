@@ -66,6 +66,55 @@ clonetrack.fx <- function(patient, sampcohort, chain, clnefrc, tracking, src){
         }
         f <- f + 1
     }
+    
+    
+    # Pulls gDNA reference if the sample does not have an infusion
+    if(length(ref_data$aaSeqCDR3) == 0){
+        ref_data <- data.frame()
+        nonref_data <- data.frame()
+         ref_fraction <- read.table(paste(src, chain, patient, "/",tracking , sep = ""), 
+                   header = TRUE, sep = "\t",
+                       stringsAsFactors = FALSE,
+                       na.strings = c("", "NA"))
+        ref_fraction <- ref_fraction[!duplicated(ref_fraction$aaSeqCDR3),]
+        ref_fraction <- cbind(cloneno = row.names(ref_fraction), 
+                     filename = paste(reference, sep="), 
+                   ref_fraction)
+        ref_fraction <- ref_fraction[, c("filename","aaSeqCDR3","cloneFraction", "cloneCount")]
+        # Subset to include only clonotypes with more than specified clonal fraction    
+        ref_fraction <- ref_fraction[ref_fraction$cloneFraction > clnefrc,] 
+        ## append the empty clonotypes after here. 
+        ref_fraction <- ref_fraction[!(ref_fraction$cloneFraction == 0),]
+        f <- 1
+        for(i in ref_fraction$filename){
+            if(i == tracking){
+                ref_data <- rbind(ref_data, ref_fraction[f,])
+            }
+            else{
+                nonref_data <- rbind(nonref_data, ref_fraction[f,])
+               }
+            f <- f + 1
+        }
+        # Generating dataframe with added gDNA TIL Infusion product and updated y-axis order for plots
+        nonref_data <- CDR3_fraction
+        first <- 0
+        for(i in CDR3_fraction$filename){
+            if(i == CDR3_fraction$filename[1]){
+            first <- first + 1
+            }
+        }
+        last <- first
+        for(i in CDR3_fraction$filename){
+            if(i == CDR3_fraction$filename[first+1]){
+            last <- last + 1
+            }
+        }
+        CDR3_fraction_first <- CDR3_fraction[1:first,]
+        CDR3_fraction_ordered <- rbind(CDR3_fraction_first, ref_data)
+        CDR3_fraction_last <- CDR3_fraction[(first + 1):last,]
+        CDR3_fraction <- rbind(CDR3_fraction_ordered, CDR3_fraction_last) 
+        CDR3_fraction$filename <- factor(CDR3_fraction$filename, levels = c(paste(CDR3_fraction$filename[first]), tracking, paste(CDR3_fraction$filename[length(CDR3_fraction$filename)])))
+    }
    
    #Assign colors to Reference clonotypes
     Ref_clns <- Ref_data$aaSeqCDR3
