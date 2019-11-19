@@ -15,4 +15,4 @@ To demonstrate accurate longitudinal tracking of specific clones, the clone trac
 The clone tracking function will take in the patient code, specific sample cohort wanting to be analyzed (gDNA, cDNA, or cfDNA), chain/locus (TRA, TRB, TRD, TRG), and the clone fraction which will be used to specifying how much each clone has to take up in order to be incorporated into the analysis. The function will track the clones according to the specific reference. For this function, the reference is the clonotypes shown in the TIL infusion. The maximum clonotypes the function will track is 150. These 150 will each be assigned a specific color and the size will be tracked longitdinally throughout the samples based on the recurrence of its amino acid CDR3 sequence.
 
 Here is an example of the clone tracking plot displaying the clonotypes >0.002 from the TRA chain of the gDNA samples in a specific patient:
-[image](https://github.com/CameronKerr/CapTCR_TIL_Tracking/blob/master/Images/CloneTrackingPlot.png)
+![image](https://github.com/CameronKerr/CapTCR_TIL_Tracking/blob/master/Images/CloneTrackingPlot.png)
