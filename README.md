@@ -1,4 +1,4 @@
-# CapTCR_TIL_Tracking
+# CapTCR TIL Tracking
 
 CapTCR TIL Tracking is a research project being run in the [Pugh Lab](http://pughlab.org/) at the Princess Margaret Cancer Research Centre. The project uses the innovative tool that the lab has developed called [CapTCR](https://www.ncbi.nlm.nih.gov/pubmed/30530777) to longitudinally track adoptive-cell transfer of Tumor-infiltrating lymphocytes (TILs) in sold-tumor cancer patients from peripheral blood samples. 
 
