@@ -8,7 +8,7 @@ Through this study, patients peripheral blood was taken and genomic DNA (gDNA), 
 
 After quality control, the samples were analyzed using a custom Bash/Python/R pipeline. 
 
-### Specific CDR3 Clone Tracking ###
+### [Specific CDR3 Clone Tracking](https://github.com/CameronKerr/CapTCR_TIL_Tracking/blob/master/Clone%20Track%20Functions/CloneTracking.R) ###
 
 To demonstrate accurate longitudinal tracking of specific clones, the clone tracking function was used to measure the relative size of each clone and track them over time. This function takes the aaCDR3 sequences from the reference (TIL Infusion Product) and track the abundance of them in the other samples and display the results as an alluvial. What this allows us to see is if an accurate response was seen in the patients and view certain characteristics of the infusion and baseline samples (richness, clonality, diversity, similarity) that may influence patient response. 
 
@@ -17,7 +17,7 @@ The clone tracking function will take in the patient code, specific sample cohor
 Here is an example of the clone tracking plot displaying the clonotypes >0.002 from the TRA chain of the gDNA samples in a specific patient:
 ![image](https://github.com/CameronKerr/CapTCR_TIL_Tracking/blob/master/Images/CloneTrackingPlot.png)
 
-## Clonal Abundance Comparison ##
+## [Clonal Abundance Comparison](https://github.com/CameronKerr/CapTCR_TIL_Tracking/blob/master/Clone%20Track%20Functions/ClonalAbundanceTracking.R) ##
 
 To demonstrate the relativity between patient's TIL Infusion clonality, the clonal abundance comparison function was used to view the top 10 clones in the TIL Infusion of each patient. This function takes in a list of samples that you want analyzed, the specific sample cohort (gDNA, cDNA, or cfDNA), chain/locus (TRA, TRB, TRD, TRG) and will create a stacked bar plot of the top 10 clones of those specific samples.
 
