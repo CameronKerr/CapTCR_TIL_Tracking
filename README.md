@@ -26,10 +26,9 @@ Here is an example of the clone tracking plot displaying the TIL Infusion produc
 
 ### [Sample Diversity Function](https://github.com/CameronKerr/CapTCR_TIL_Tracking/blob/master/Diversity%20Functions/SampleDiv.R) ###
 
-To demonstrate the effect of diversity on patients and to compare sample type and loci measure of diversity the sample diversity function was used to compute the inverse-simpson diversity for each sample and compare them over time. This allows us to see a patients progression as a view of their whole T-cell repertoire as a measure of diversity. The inverse-simpson diversity was computed using the [Immunarch 4.0 package](https://github.com/immunomind/immunarch). The inverse simpson diversity is represented as the following: 
-![image](https://wikimedia.org/api/rest_v1/media/math/render/svg/dbc8eff396415812bcb1ae8a68d525cf43d83599)
+To demonstrate the effect of diversity on patients and to compare sample type and loci measure of diversity the sample diversity function was used to compute the inverse-simpson diversity for each sample and compare them over time. This allows us to see a patients progression as a view of their whole T-cell repertoire as a measure of diversity. The inverse-simpson diversity was computed using the [Immunarch 4.0 package](https://github.com/immunomind/immunarch). 
 
-This allows us to measure and quantify the average abundance of types in the sample datasets and find the effective number of types. The sampleDiv function will produce a line plot with both the diversity computed for the DNA and RNA samples.
+The index allows us to measure and quantify the average abundance of types in the sample datasets and find the effective number of types. The sampleDiv function will produce a line plot with both the diversity computed for the DNA and RNA samples.
 
 Here is an example of the diversity plot for a patient's TRA chain DNA and RNA samples:
 ![image](https://github.com/CameronKerr/CapTCR_TIL_Tracking/blob/master/Images/SampleDiversityPlot.png)
