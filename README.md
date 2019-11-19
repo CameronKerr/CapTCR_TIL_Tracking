@@ -14,14 +14,14 @@ To demonstrate accurate longitudinal tracking of specific clones, the clone trac
 
 The clone tracking function will take in the patient code, specific sample cohort wanting to be analyzed (gDNA, cDNA, or cfDNA), chain/locus (TRA, TRB, TRD, TRG), and the clone fraction which will be used to specifying how much each clone has to take up in order to be incorporated into the analysis. The function will track the clones according to the specific reference. For this function, the reference is the clonotypes shown in the TIL infusion. The maximum clonotypes the function will track is 150. These 150 will each be assigned a specific color and the size will be tracked longitdinally throughout the samples based on the recurrence of its amino acid CDR3 sequence.
 
-Here is an example of the clone tracking plot displaying the clonotypes >0.002 from the TRA chain of the gDNA samples in a specific patient:
+Here is an example of the clone tracking plot displaying the clonotypes >0.002 from the TRA chain of the gDNA samples in a specific patient (Patient and sample names have been cut out due to patient confidentiality):
 ![image](https://github.com/CameronKerr/CapTCR_TIL_Tracking/blob/master/Images/CloneTrackingPlot.png)
 
 ### [Clonal Abundance Comparison](https://github.com/CameronKerr/CapTCR_TIL_Tracking/blob/master/Clone%20Track%20Functions/ClonalAbundanceTracking.R) ###
 
 To demonstrate the relativity between patient's TIL Infusion clonality, the clonal abundance comparison function was used to view the top 10 clones in the TIL Infusion of each patient. This function takes in a list of samples that you want analyzed, the specific sample cohort (gDNA, cDNA, or cfDNA), chain/locus (TRA, TRB, TRD, TRG) and will create a stacked bar plot of the top 10 clones of those specific samples.
 
-Here is an example of the clone tracking plot displaying the TIL Infusion products of all the patients in the research project for the TRA and TRB chains:
+Here is an example of the clone tracking plot displaying the TIL Infusion products of all the patients in the research project for the TRA and TRB chains (Patient and sample names have been cut out due to patient confidentiality):
 ![image](https://github.com/CameronKerr/CapTCR_TIL_Tracking/blob/master/Images/ClonalAbundanceInfusionComparison.JPG)
 
 ### [Sample Diversity Function](https://github.com/CameronKerr/CapTCR_TIL_Tracking/blob/master/Diversity%20Functions/SampleDiv.R) ###
@@ -30,8 +30,17 @@ To demonstrate the effect of diversity on patients and to compare sample type an
 
 The index allows us to measure and quantify the average abundance of types in the sample datasets and find the effective number of types. The sampleDiv function will produce a line plot with both the diversity computed for the DNA and RNA samples.
 
-Here is an example of the diversity plot for a patient's TRA chain DNA and RNA samples:
+Here is an example of the diversity plot for a patient's TRA chain DNA and RNA samples (Patient and sample names have been cut out due to patient confidentiality):
 ![image](https://github.com/CameronKerr/CapTCR_TIL_Tracking/blob/master/Images/SampleDiversityPlot.png)
+
+### [Repertoire Overlap Function](https://github.com/CameronKerr/CapTCR_TIL_Tracking/blob/master/Repertoire%20Overlap/RepOverlap.R) ###
+
+To demonstrate how the dynamics of a persons T-cell repertoire effects the patients response, the repLap function allowed us to analyze how much of a persons immune response is overlapping between multiple samples. This analysis was done with a specific focus on looking at Baseline <> TIL Infusion Product overlap, Baseline <> Post-Infusion overlap and TIL Infusion Product <> Post-Infusion overlap.
+
+The repLap function will take in a patient's sample for a specific sample cohort and will compute the overlap between the samples. It produces a heatmap with the number of overlapping clonotypes shown between the samples. We used the Immunarch 4.0 'repOverlap' function to sort through the samples and compute the overlap. 
+
+Here is an example of a patient's repertoire overlap for their DNA samples TRA and TRB chains (Patient and sample names have been cut out due to patient confidentiality):
+![image](https://github.com/CameronKerr/CapTCR_TIL_Tracking/blob/master/Images/RepertoireOverlap.png)
 
 ## Results ##
 
