@@ -1,0 +1,22 @@
+###################################
+# Baseline TIL-clonotype counting #
+###################################
+
+# Calculating the amount of TIL-related clones in the baseline repertoire
+
+# @Param patient: specific patient code
+# @Param sampcohort: Desired sample cohort, could be gDNA, cDNA, or cfDNA
+# @Param chain: Desired chain to analyze, could be TRA, TRB, TRD, TRG
+# @Param clnefrc: cut-off from 0 to 1 to track and plot only a subset of clonotypes
+
+Base_TILclone <- function(patient, sampcohort, chain, clnefrc){
+    # Loading specific locus nad sampcohort 4W, TIL, and baseline samples for patient
+    Load_data(patient, sampcohort, chain, clnefrc)
+    # Filtering the base data by the clones in the TIL data
+    Base_filtered_data <- Base_data[Base_data$aaSeqCDR3 %in% TIL_data$aaSeqCDR3,]
+    # Take all the clonotypes in the baseline sample above the set clone fraction
+    Base_filtered_data <- Base_filtered_data[Base_filtered_data$cloneFraction > clnefrc,]
+    # Find the number of TIL-clonotypes in the baseline sample
+    Base_TILclone_count <- nrow(Base_filtered_data)
+    print(Base_TILclone_count)
+}
