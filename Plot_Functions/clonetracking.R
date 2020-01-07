@@ -10,7 +10,7 @@ require(ggalluvial)
 # @Param chain: Desired chain to analyze, could be TRA, TRB, TRD, TRG
 # @Param clnefrc: cut-off from 0 to 1 to track and plot only a subset of clonotypes
 
-clonetrack.fx <- function(patient, sampcohort, chain, clnefrc){
+clonetrack.fx <- function(patient, sampcohort, chain, clnefrc, tracking){
     samporder <- eval(as.name(paste(patient, sampcohort, sep="")))
     
     # Loading specific locus nad sampcohort 4W, TIL, and baseline samples for patient
@@ -37,8 +37,8 @@ clonetrack.fx <- function(patient, sampcohort, chain, clnefrc){
         # Create a dataframe for all the TIL Infusion Product clonotypes
         #TIL_data <- CDR3_fraction[which(CDR3_fraction$filename=='TIL Infusion Product'),]
         # Generating dataframe with added gDNA TIL Infusion product and updated y-axis order for plots
-        CDR3_added_fraction <- rbind(Base_data, TIL_data, FW_data)
-        CDR3_added_fraction$filename <- factor(CDR3_added_fraction$filename, levels = c(samporder))
+        CDR3_fraction <- rbind(Base_data, TIL_data, FW_data)
+        CDR3_fraction$filename <- factor(CDR3_added_fraction$filename, levels = c(samporder))
     }
     
     #Assign colors to TIL Infusion clonotypes
@@ -64,9 +64,9 @@ clonetrack.fx <- function(patient, sampcohort, chain, clnefrc){
     message("these are what we color: ")
     print(mycolors[mycolors != "white"])
     #CDR3_fraction <- rbind(CDR3_fraction, TIL_data)
-    levels(CDR3_added_fraction$filename) <- c(samporder)
+    levels(CDR3_fraction$filename) <- c(samporder)
     
-    p <-  ggplot(CDR3_added_fraction, aes(x = filename,
+    p <-  ggplot(CDR3_fraction, aes(x = filename,
                               y = cloneFraction,
                               fill = aaSeqCDR3,
                               stratum = aaSeqCDR3,
