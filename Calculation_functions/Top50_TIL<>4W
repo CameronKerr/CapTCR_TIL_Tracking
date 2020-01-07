@@ -1,0 +1,36 @@
+############################################################
+# Top 50% clones in TIL Infusion compared to 4 week sample #
+############################################################
+
+# Calculating the amount
+
+# @Param patient: specific patient code
+# @Param sampcohort: Desired sample cohort, could be gDNA, cDNA, or cfDNA
+# @Param chain: Desired chain to analyze, could be TRA, TRB, TRD, TRG
+# @Param clnefrc: cut-off from 0 to 1 to track and plot only a subset of clonotypes
+
+Top50_TILto4W <- function(patient, sampcohort, chain, clnefrc){
+    # Load data including 4W data, TIL data, and Baseline data
+    Load_data(patient, sampcohort, chain, clnefrc)
+    # Creating a dataframe which contains TIL data and the associated clone fraction in the 4W sample
+        Total_TIL_data <- TIL_data
+        FW_clonefraction <- NA
+        Total_TIL_data <- cbind(Total_TIL_data, FW_clonefraction)
+    # Takes the top 50% (by clone fraction) of the Total_TIL_data dataset
+    Top_50_clnefrc <- 0
+    f <- 1
+    for(i in Total_TIL_data$cloneFraction){
+        if(Top_50_clnefrc < 0.5){
+            Top_50_clnefrc <- Top_50_clnefrc + i
+            Top50_TIL_data <- rbind(Top50_TIL_data, Total_TIL_data[f,])
+            f <- f + 1
+        }
+    }
+    # Fills the FW_clonefraction row with the clone fraction from the 4W clonotype that matched the specific clonotype in the TIL Infusion Product
+    Total_TIL_data$FW_clonefraction <- FW_data$cloneFraction[match(Total_TIL_data$aaSeqCDR3, FW_data$aaSeqCDR3)]
+    Total_TIL_data[is.na(Total_TIL_data)] <- 0
+    # Finds and prints the sum of the FW_clonefraction and cloneFraction
+    FW_rel_clnefrc <- sum(Top50_TIL_data$FW_clonefraction)
+    print(FW_rel_clnefrc)
+    print(Top_50_clnefrc)
+}
