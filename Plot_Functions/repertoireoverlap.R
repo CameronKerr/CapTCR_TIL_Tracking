@@ -18,7 +18,7 @@ repLap <- function(patient, sampcohort, chain){
     # Immunarch's 'repOverlap' function is the used to compute the overlapping CDR3 sequences.  #
     # between each of the samples in each loci.
     
-    TLML_data <- repLoad(paste("/Users/cameronk/OneDrive - UHN/TLML/TLML_Clones/", sampcohort, "/CLONES_", chain, patient,"/", sep=""))
+    TLML_data <- repLoad(paste("/PATH/", sampcohort, "/CLONES_", chain, patient,"/", sep=""))
     TLML_ov <- repOverlap(TLML_data, .method="morisita", .verbose=F)
     TLML_myp <- vis(TLML_ov)
     TLML_myp <- TLML_myp + labs(y = "Patient TIL Infusion", x = "Patient TIL Infusion") +
