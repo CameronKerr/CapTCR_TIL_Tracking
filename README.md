@@ -17,13 +17,6 @@ The clone tracking function will take in the patient code, specific sample cohor
 Here is an example of the clone tracking plot displaying the clonotypes >0.002 from the TRA chain of the gDNA samples in a specific patient (Patient and sample names have been cut out due to patient confidentiality):
 ![image](https://github.com/CameronKerr/CapTCR_TIL_Tracking/blob/master/Images/CloneTrackingPlot.png)
 
-### [TIL Clonality Comparison](https://github.com/CameronKerr/CapTCR_TIL_Tracking/blob/master/Clone%20Track%20Functions/ClonalAbundanceTracking.R) ###
-
-To demonstrate the relativity between patient's TIL Infusion clonality, the clonal abundance comparison function was used to view the top 10 clones in the TIL Infusion of each patient. This function takes in a list of samples that you want analyzed, the specific sample cohort (gDNA, cDNA, or cfDNA), chain/locus (TRA, TRB, TRD, TRG) and will create a stacked bar plot of the top 10 clones of those specific samples.
-
-Here is an example of the clone tracking plot displaying the TIL Infusion products of all the patients in the research project for the TRA and TRB chains (Patient and sample names have been cut out due to patient confidentiality):
-![image](https://github.com/CameronKerr/CapTCR_TIL_Tracking/blob/master/Images/ClonalAbundanceInfusionComparison.JPG)
-
 ### [Sample Diversity Function](https://github.com/CameronKerr/CapTCR_TIL_Tracking/blob/master/Plot_Functions/diversityevaluation.R) ###
 
 To demonstrate the effect of diversity on patients and to compare sample type and loci measure of diversity the sample diversity function was used to compute the inverse-simpson diversity for each sample and compare them over time. This allows us to see a patients progression as a view of their whole T-cell repertoire as a measure of diversity. The inverse-simpson diversity was computed using the [Immunarch 4.0 package](https://github.com/immunomind/immunarch). 
@@ -33,6 +26,10 @@ The index allows us to measure and quantify the average abundance of types in th
 Here is an example of the diversity plot for a patient's TRA chain DNA and RNA samples (Patient and sample names have been cut out due to patient confidentiality):
 ![image](https://github.com/CameronKerr/CapTCR_TIL_Tracking/blob/master/Images/SampleDiversityPlot.png)
 
+### [Sample Clonality Comparison](https://github.com/CameronKerr/CapTCR_TIL_Tracking/blob/master/Clone%20Track%20Functions/ClonalAbundanceTracking.R) ###
+
+**ADD
+
 ### [Repertoire Overlap Function](https://github.com/CameronKerr/CapTCR_TIL_Tracking/blob/master/Plot_Functions/repertoireoverlap.R) ###
 
 To demonstrate how the dynamics of a persons T-cell repertoire effects the patients response, the repLap function allowed us to analyze how much of a persons immune response is overlapping between multiple samples. This analysis was done with a specific focus on looking at Baseline <> TIL Infusion Product overlap, Baseline <> Post-Infusion overlap and TIL Infusion Product <> Post-Infusion overlap.
@@ -41,6 +38,13 @@ The repLap function will take in a patient's sample for a specific sample cohort
 
 Here is an example of a patient's repertoire overlap for their DNA samples TRA and TRB chains (Patient and sample names have been cut out due to patient confidentiality):
 ![image](https://github.com/CameronKerr/CapTCR_TIL_Tracking/blob/master/Images/RepertoireOverlap.png)
+
+### [TIL Clonality Comparison](https://github.com/CameronKerr/CapTCR_TIL_Tracking/blob/master/Plot_Functions/ClonalAbundanceTracking.R) ###
+
+To demonstrate the relativity between patient's TIL Infusion clonality, the clonal abundance comparison function was used to view the top 10 clones in the TIL Infusion of each patient. This function takes in a list of samples that you want analyzed, the specific sample cohort (gDNA, cDNA, or cfDNA), chain/locus (TRA, TRB, TRD, TRG) and will create a stacked bar plot of the top 10 clones of those specific samples.
+
+Here is an example of the clone tracking plot displaying the TIL Infusion products of all the patients in the research project for the TRA and TRB chains (Patient and sample names have been cut out due to patient confidentiality):
+![image](https://github.com/CameronKerr/CapTCR_TIL_Tracking/blob/master/Images/ClonalAbundanceInfusionComparison.JPG)
 
 ### [Calculation Functions](https://github.com/CameronKerr/CapTCR_TIL_Tracking/blob/master/Calculation_functions/all.R) ###
 
