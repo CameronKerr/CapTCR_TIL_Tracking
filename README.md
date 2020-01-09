@@ -26,9 +26,11 @@ The index allows us to measure and quantify the average abundance of types in th
 Here is an example of the diversity plot for a patient's TRA chain DNA and RNA samples (Patient and sample names have been cut out due to patient confidentiality):
 ![image](https://github.com/CameronKerr/CapTCR_TIL_Tracking/blob/master/Images/SampleDiversityPlot.png)
 
-### [Sample Clonality Comparison](https://github.com/CameronKerr/CapTCR_TIL_Tracking/blob/master/Clone%20Track%20Functions/ClonalAbundanceTracking.R) ###
+### [Sample Clonality Comparison](https://github.com/CameronKerr/CapTCR_TIL_Tracking/blob/master/Plot_Functions/relativeabundance.R) ###
 
-**ADD
+To demonstrate the effect of relative clonality on patient expansion and response, I used the clonal abundance measure from the Immunarch 4.0 package. This categorized wether the clones took up 0.005%, 0.05%, 0.5%, or 5% of the total sample. It then plotted these sections as a bar plot. 
+
+Here is an example of the relative abundance for a patient's TRA chain DNA and RNA samples (Patient and sample names have been cut out due to patient confidentiality): 
 
 ### [Repertoire Overlap Function](https://github.com/CameronKerr/CapTCR_TIL_Tracking/blob/master/Plot_Functions/repertoireoverlap.R) ###
 
