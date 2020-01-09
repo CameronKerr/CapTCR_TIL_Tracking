@@ -42,6 +42,10 @@ The repLap function will take in a patient's sample for a specific sample cohort
 Here is an example of a patient's repertoire overlap for their DNA samples TRA and TRB chains (Patient and sample names have been cut out due to patient confidentiality):
 ![image](https://github.com/CameronKerr/CapTCR_TIL_Tracking/blob/master/Images/RepertoireOverlap.png)
 
+### [Calculation Functions](https://github.com/CameronKerr/CapTCR_TIL_Tracking/blob/master/Calculation_functions/all.R) ###
+
+To get an exact representation of many of the characteristics I was analyzing, I created multiple functions to calculated these numbers. A major example of these are the top 50% calculations. These functions take the top 50% of whatever desired sample (i.e TIL Infusion Product) and compares those clones to the resulting size of them in another sample (i.e 4 week sample). This was specifically useful to measure the level of selected expansion that occured in all patients. 
+
 ## Results ##
 
 ### Two-step and three-step CapTCR methods yeilded increased signal strength ###
