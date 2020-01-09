@@ -44,12 +44,23 @@ Here is an example of a patient's repertoire overlap for their DNA samples TRA a
 
 ## Results ##
 
-### Optimal Steps for CapTCR Molecular Depletion ###
+### Two-step and three-step CapTCR methods yeilded increased signal strength ###
 
-### Tracking Immune Response in Peripheral Blood Samples ###
+Previously, the Pugh lab has described a hybrid capture method using a probe set targeting subregions of all annotated TCR locus V and J genes. The main challenge faced was the large number of reads representing fragments from unrearranged V and J genes when enriching. To demonstrate the most efficient order of molecular depletion in CapTCR, the lab experiment with an iterative two-step and three-step capture approach and analyzed the resulting on-target reads. The results displayed higher signal strengths with the iterative two-step and three-step capture methods.
 
-### Effect of Clonality on Immune Response ###
+### The level of expansion to the adoptive cell transfer of TILs can be tracked longitudinally using CapTCR with high accuracy ###
 
-### Effect of Baseline <> Post-TIL Infusion Product Repertoire Overlap on Immune Response ###
+To demonstrate the effective monitoring of TIL ACT in peripheral blood samples, we tracked TIL-specific clonotypes over the patient timeline. The clone tracking function took the TIL-specific CDR3 sequences and filtered through the peripheral blood samples for the ones containing those sequences. Overall, we were able to see multiple levels of expansion, clonality, and diversity between patients. 
+
+### The level of expansion to the adoptive cell transfer of TILs can be tracked longitudinally using CapTCR with high accuracy ###
+
+Multiple studies of analyzing the T-cell repertoire after TIL infusion have shown that patients with high expansion had a high clonality post-infusion. Authors showed that despite infusions with polyclonality, a single immunodominant clone emerged post-infusion. To demonstrate the effect of the clonality of the baseline, TIL infusion, and post-infusion samples on expansion, we analyzed the diversity and clonal structures of the patients. In our study, a pattern was seen during the post-infusion samples. Despite clonality in baseline or TIL-infusions, a higher clonality correlated with a higher expansion. 
+
+### Small clonotypes undergo selected-expansion of TIL-infusion clones post-infusion ###
+
+In previous studies, selected-expansion occurs for the resulting TIL-dominant clones. Studies have shown in the past that for some patients, clones with a pre-infusion fraction of <0.001% demonstrated a high expansion. To demonstrate the selected-expansion of TIL-related clones we used the plots tracking TIL-specific clonotypes clone fraction to view specific clonal expansion. The results were suprising with the top percentage of clones in TIL Infusion Product ending up taking a small amount of clones 4 weeks post-infusion.
+
 
 ### Selected Clonal Expansion of TIL Infusion ###
+
+Multiple in vivo dynamics hypotheses have been put forward in order to explain the selected-expansion of certain clonotypes. Authors in some studies have suggested that TIL culturing methods (antigen-pulsed dendritic cells in the presence of IL-2) result in naive T cell expansion in vitro in the TIL-infusion product but defer expansion in vivo throughout the peripheral blood samples. To demonstrate the correlation between baseline, TIL-infusion, and post-infusion overlap and patient survival, we analyzed the TCR repertoire overlap between patient samples. We observed that patients who had a higher level of ;arger than average TIL-related clones in their baseline would have a higher expansion post-infusion.
