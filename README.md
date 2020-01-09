@@ -32,6 +32,8 @@ To demonstrate the effect of relative clonality on patient expansion and respons
 
 Here is an example of the relative abundance for a patient's TRA chain DNA and RNA samples (Patient and sample names have been cut out due to patient confidentiality): 
 
+![image](https://github.com/CameronKerr/CapTCR_TIL_Tracking/blob/master/Images/Alpha_Beta_relAb.png)
+
 ### [Repertoire Overlap Function](https://github.com/CameronKerr/CapTCR_TIL_Tracking/blob/master/Plot_Functions/repertoireoverlap.R) ###
 
 To demonstrate how the dynamics of a persons T-cell repertoire effects the patients response, the repLap function allowed us to analyze how much of a persons immune response is overlapping between multiple samples. This analysis was done with a specific focus on looking at Baseline <> TIL Infusion Product overlap, Baseline <> Post-Infusion overlap and TIL Infusion Product <> Post-Infusion overlap.
